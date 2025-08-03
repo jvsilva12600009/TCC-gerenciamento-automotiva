@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css" />   
+    <link rel="stylesheet" href="/js/jquery/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/js/jtable/themes/lightcolor/gray/jtable.min.css"  type="text/css" />
+    <link rel="stylesheet" href="/css/sgo.css"  type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/js/validation/validationEngine.jquery.css">
+
+    
+    <script src="/js/jquery/jquery-3.7.1.min.js"></script>
+    <script src="/js/jquery/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/jtable/jquery.jtable.min.js"></script>
+    <script type="text/javascript" src="/js/jtable/localization/jquery.jtable.pt-BR.js"></script>
+    <script type="text/javascript" src="/js/validation/jquery.validationEngine.min.js"></script>
+    <script type="text/javascript" src="/js/validation/jquery.validationEngine-pt_BR.js"></script>       
+    <script src="/js/jquery/jquery-ui-datepicker-pt-BR.js"></script>  
+    <script src="/js/utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <title><%= titulo %></title>
+
+  </head>
+  <body>
+       
+    <%- include('./partials/_nav', {menu:menu, usuario:usuario});%>
+
+    <main class="main-content">
+
+      <div class="container-fluid">
+        <%- include(link);%>
+      </div>
+
+      <% if (typeof libs !== 'undefined') { %>
+        <% for (let lib of libs) { %>
+            <script src='<%=lib%>' ></script>
+        <% } %>
+      <% } %>
+    </main>
+    <%- include('./partials/_footer');%>
+
+  </body>
+</html>

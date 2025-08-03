@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {  
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("../imgs/telalogin03.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.144); 
+      padding: 50px; 
+      border-radius: 10px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+     backdrop-filter: blur(5px); 
+     max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+    box-sizing: border-box;
+     background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.616);;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .forgot-password {
+        color: #000000; /* Alterando a cor do link */
+        text-decoration: none; /* Removendo o sublinhado padrão */
+         margin-bottom: 10px; /* Espaçamento abaixo do link */
+}
+
+    button:hover {
+      background-color: #5a6f85;
+    }
+
+    .message {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .error {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="formularioLogin" action="/auth/login" method="post"> <!-- Alterei o action para "/login" -->
+    <h1>Login</h1>
+    <div id="mensagemErro" class="error" style="display: none;"></div>
+    <input type="text" name="email" placeholder="E-mail" required> <!-- Alterei o name para "usuario" -->
+    <input type="password" name="senha" placeholder="Senha" required>
+    <button type="submit">Login</button>
+    <div id="mensagemLogin" class="message"></div>
+  </form>
+
+  
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="card" >
+    <div class="card-header form-inline" id="form-agenda-pesquisa">
+        <div class="form-group mr-2" >
+            <select class="form-control" name="status">                
+                <option value="0" >Inativo</option>
+                <option value="1" selected="selected">Ativo</option>
+            </select>
+        </div>  
+        <div class="input-group mr-2">
+            <input type="text" class="form-control" id="pesquisa_cliente" name="cliente" placeholder="Nome do Cliente">
+            <div class="input-group-append">
+                <span class="btn btn-secondary" id="btn-agenda-pesquisa">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>               
+            </div>
+          </div>
+    </div>
+    <div class="card-body" style="padding: 3px;">
+        <div id="table-agenda" class="sgo-table-container"></div>
+    </div>
+</div>

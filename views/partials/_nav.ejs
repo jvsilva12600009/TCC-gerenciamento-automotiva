@@ -1,0 +1,95 @@
+<nav class="navbar navbar-dark bg-secondary text-white navbar-expand" style="margin-bottom: 10px;">
+    <div class="container">
+  
+  
+      <%if(usuario.tipo == 2 || usuario.tipo == 1){%>
+        <a class="navbar-brand" href="/home">SGO</a>
+        <%}%>
+  
+      <%if(usuario.tipo == 0 ){%>
+        <a class="navbar-brand" href="#">SGO</a>
+        <%}%>
+  
+        <ul class="navbar-nav mr-auto">
+          <%if(usuario.tipo == 2){%>
+            <li class="nav-item">
+                <a class="nav-link <%=menu=='usuarios'?'active':''%>" href="/usuarios"><span>Usuários</span></a>
+            </li>
+            <%}%>
+            <%if(usuario.tipo == 1 || usuario.tipo == 2){%>
+            <li class="nav-item">
+                <a class="nav-link <%=menu=='veiculos'?'active':''%>" href="/veiculos"><span>Veiculos</span></a>
+            </li>
+            <%}%>
+            <%if(usuario.tipo == 2){%>
+            <li class="nav-item">
+                <a class="nav-link <%=menu=='produtos'?'active':''%>" href="/produtos"><span>Produtos</span></a>
+            </li>
+            <%}%>
+            <%if(usuario.tipo == 1 || usuario.tipo == 2){%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle <%= menu == 'agenda' ? 'active' : '' %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>Agenda</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/agenda">Ir para Agenda</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/graficos?show=agenda">Visualizar Gráficos</a>
+                    </div>
+                </li>
+            <%}%>
+            <%if(usuario.tipo == 1 || usuario.tipo == 2){%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle <%= menu == 'orcamento' ? 'active' : '' %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>Orçamentos</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/orcamento">Ir para Orçamentos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/graficos?show=orcamento">Visualizar Gráficos</a>
+                    </div>
+                </li>
+            <%}%>
+            <%if(usuario.tipo == 1 || usuario.tipo == 2){%>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle <%= menu == 'os' ? 'active' : '' %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>Ordens de serviço</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/os">Ir para Ordens de Serviço</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/graficos?show=os">Visualizar Gráficos</a>
+                    </div>
+                </li>
+                
+            <%}%>
+            <%if(usuario.tipo == 0 ){%>
+              <li class="nav-item">
+                  <a class="nav-link <%=menu=='cliente'?'active':''%>" href="/cliente"><span>Dashbord</span></a>
+              </li>
+              <%}%>
+        </ul>      
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fa fa-user rounded-circle"></span> <%=usuario.nome%>                 
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                 
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/auth/logout">Logout</a>
+              </div>
+              </li>
+          </ul>
+          </div>
+  
+  
+  
+  
+  
+  
+    </div>
+    
+  </nav>
+  

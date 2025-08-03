@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header form-inline" id="form-pesquisa-orcamento">  
+        <div class="form-group mr-2">
+            <select class="form-control" name="status">                
+                <option value="0" selected="selected">Aguardando Aprovação</option>
+                <option value="1">Aprovado</option>
+                <option value="2">Reprovado</option>
+            </select>
+        </div>     
+        <div class="input-group mr-2">
+            <input type="text" class="form-control" name="veiculo" placeholder="Placa | Modelo">
+            <div class="input-group-append">
+                <span class="btn btn-secondary" id="btn-orcamento-pesquisa">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <!-- Export to PDF Button -->
+        <button class="btn btn-custom-gray" id="btn-orcamento-exportar">Exportar para PDF</button>
+    </div>
+    <div class="card-body" style="padding: 3px;">
+        <div id="table-orcamento" class="sgo-table-container"></div>
+    </div>
+</div>

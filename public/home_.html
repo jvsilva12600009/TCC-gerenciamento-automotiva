@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #fff;
+      padding: 10px 0;
+    }
+    .column {
+      text-align: center;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-right: 1px solid #fff;
+    }
+    nav a:last-child {
+      border-right: none;
+    }
+    section {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gerenciador</h1>
+  </header>
+  <nav>
+    <div class="column">
+      <a href="usuarios/">
+        <img src="imgs/grupo-de-usuarios.png" alt="Compra" style="width: 75px; height: 75px;">
+        <p>Usuários</p>
+      </a> 
+    </div>
+    <div class="column">
+      <a href="produtos/">
+        <img src="imgs/cesta-de-compras.png" alt="Compra" style="width: 75px; height: 75px;">
+        <p>Produtos</p>
+      </a>  
+    </div> 
+    <div class="column">
+      <a href="veiculos/">
+        <img src="imgs/16301.png" alt="Compra" style="width: 75px; height: 75px;">
+        <p>Veículos</p>
+      </a> 
+    </div>
+    <div class="column">
+      <a href="agenda/">
+        <img src="imgs/calendario-de-folha-de-pagamento.png" alt="Compra" style="width: 75px; height: 75px;">
+        <p>Agenda</p>
+      </a>  
+    </div>
+    <div class="column">
+      <a href="orcamento/">
+        <img src="imgs/moedas.png" alt="Compra" style="width: 75px; height: 75px;">
+        <p>Orçamentos</p>
+      </a>    
+    </div>
+    <div class="column">
+      <a href="os/">
+        <img src="imgs/auditoria-alternativa.png" alt="Ordens de Serviço" style="width: 75px; height: 75px;">
+        <p>Ordens de serviço</p>
+      </a>
+    </div>
+  </nav>
+
+  
+  <section>
+    <h2>Gráfico de Vendas Mensais</h2>
+    <canvas id="meuGrafico"></canvas>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Dados do gráfico (exemplo)
+    var dados = {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+      datasets: [{
+        label: 'Vendas por mês',
+        backgroundColor: '#007bff',
+        data: [12, 19, 3, 5, 2, 3] // Dados reais dos meses
+      }]
+    };
+
+    // Configurações do gráfico
+    var config = {
+      type: 'bar',
+      data: dados,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // Renderiza o gráfico no canvas
+    var myChart = new Chart(
+      document.getElementById('meuGrafico'),
+      config
+    );
+  </script>
+</body>
+</html>

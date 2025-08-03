@@ -1,0 +1,127 @@
+<div id="dashboard">
+  <div class="row">
+
+    <!-- Exibir apenas o gráfico de Ordens de Serviço se 'show=os' estiver na URL -->
+    <% if (typeof show != 'undefined' && show == 'os') { %>
+      
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Percentual de Ordens de serviço por Status</div>
+          <div class="card-body">         
+            <canvas id="percentual_os" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+          </div>        
+        </div>
+      </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Dias que mais foram criadas ordens de serviço</div>
+        <div class="card-body">         
+          <canvas id="os_por_dia" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+   
+
+    
+  
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Executantes que mais realizaram ordens de serviço (Barras)</div>
+      <div class="card-body">         
+        <canvas id="executantes_os_mes" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+      </div>        
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Executantes que mais realizaram ordens de serviço (Radar)</div>
+      <div class="card-body">         
+        <canvas id="os_por_executante" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+      </div>        
+    </div>
+  </div>
+    
+
+    <% } else if (typeof show != 'undefined' && show == 'orcamento') { %>
+    
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Percentual de Orçamentos por Status</div>
+        <div class="card-body">
+          <canvas id="percentual_orcamentos" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+    
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Produtos mais utilizados nos orçamentos aprovados</div>
+        <div class="card-body">
+          <canvas id="produtos_mais_usados" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Produtos mais caros dos orçamentos aprovados</div>
+        <div class="card-body">
+          <canvas id="caros" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Percentual de Orçamentos por Status</div>
+        <div class="card-body">
+          <canvas id="dia_orcamentos" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+    <% } else { %>
+
+    <!-- Caso contrário, exibir todos os gráficos -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Percentual de agendamentos por status</div>
+        <div class="card-body">         
+          <canvas id="percentual_a" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Agendamentos Por Mês</div>
+        <div class="card-body">         
+          <canvas id="agendamentos_mes" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Modelos de Veículos com mais agendamentos ativos</div>
+        <div class="card-body">         
+          <canvas id="agendamentos_veiculo" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Agendamentos Ativos por cliente</div>
+        <div class="card-body">         
+          <canvas id="agendamentos_cliente" aria-label="chart"  style="height: 350px; width: 100%;"></canvas>          
+        </div>        
+      </div>
+    </div>
+
+    
+    <% } %>
+  </div>
+</div>

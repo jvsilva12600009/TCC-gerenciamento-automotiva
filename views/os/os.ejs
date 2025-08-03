@@ -1,0 +1,31 @@
+<div class="card" >
+    <div class="card-header form-inline" id="form-pesquisa-os">
+        <div class="form-group mr-2" >
+            <select class="form-control" name="status">                
+                <option value="0" selected="selected">Aberto</option>
+                <option value="1" >Executado</option>
+                <option value="2" >Cancelado</option>
+            </select>
+        </div>  
+        <div class="input-group mr-2">
+            <input type="text" class="form-control" id="pesquisa_agenda" name="agendacodigo" placeholder="Placa | Modelo ">
+            <div class="input-group-append">
+                             
+            </div>
+          </div>
+          
+        <div class="input-group mr-2">
+            <input type="text" class="form-control" id="pesquisa_exe" name="executantecodigo" placeholder="Nome do executante">
+            <div class="input-group-append">
+                <span class="btn btn-secondary" id="btn-pesquisa-os">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="card-body" style="padding: 3px;">
+        <div id="table-os" class="sgo-table-container"></div>
+    </div>
+</div>

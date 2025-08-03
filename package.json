@@ -1,0 +1,27 @@
+{
+  "name": "tcc",
+  "version": "1.0.0",
+  "description": "Projeto de conclusão de curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "bcrypt": "^5.1.1",
+    "chart.js": "^4.4.3",
+    "connect-sqlite3": "^0.9.15",
+    "ejs": "^3.1.10",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "jquery": "^3.7.1",
+    "moment": "^2.30.1",
+    "mysql2": "^3.9.2",
+    "path": "^0.12.7",
+    "pdfkit": "^0.15.0",
+    "url": "^0.11.3"
+  }
+}
