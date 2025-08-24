@@ -14,8 +14,8 @@ Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) no curso técnic
 6. [Execução](#execução)  
 7. [Funcionalidades](#funcionalidades)  
 8. [Banco de Dados](#banco-de-dados)  
-9. [Contribuição](#contribuição)  
-10. [Licença](#licença)
+
+
 
 ---
 
