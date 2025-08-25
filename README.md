@@ -34,7 +34,7 @@ A interface foi desenvolvida com tecnologias web modernas, garantindo um sistema
 * **jQuery** – manipulação DOM e integração via AJAX
 * **HTML / CSS / Less** – estruturação e estilização das páginas
 * **EJS** – templates no servidor para páginas dinâmicas
-* **MySQL ** – banco de dados relacional
+* **MySQL** – banco de dados relacional
 
 ---
 
