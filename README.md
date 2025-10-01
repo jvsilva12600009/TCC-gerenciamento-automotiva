@@ -67,8 +67,8 @@ Antes de executar o projeto, instale:
 Clone o repositório e instale as dependências:
 
 ```cmd
-git clone https://github.com/joaovs12009/TCC---Sistema-de-Gerenciamento-de-Ordens-de-manutencao-automotiva.git
-cd TCC---Sistema-de-Gerenciamento-de-Ordens-de-manutencao-automotiva
+git clone https://github.com/joaovsilva12089/Trabalho-Conclusao-Curso-Gerenciamento-Manutencao-Automotiva.git
+cd Trabalho-Conclusao-Curso-Gerenciamento-Manutencao-Automotiva
 npm install
 ```
 
