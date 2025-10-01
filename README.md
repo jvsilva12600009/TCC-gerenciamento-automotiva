@@ -67,7 +67,7 @@ Antes de executar o projeto, instale:
 Clone o repositório e instale as dependências:
 
 ```cmd
-git clone https://github.com/joaovsilva12089/Trabalho-Conclusao-Curso-Gerenciamento-Manutencao-Automotiva.git
+git clone https://github.com/jvsilva9827/Trabalho-Conclusao-Curso-Gerenciamento-Manutencao-Automotiva.git
 cd Trabalho-Conclusao-Curso-Gerenciamento-Manutencao-Automotiva
 npm install
 ```
